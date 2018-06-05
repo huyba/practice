@@ -6,20 +6,20 @@ public class BSTTest {
 	 */
 	public static void main(String[] args) {
 		BST bst = new BST();
-		bst.Add(100);
-		bst.Add(80);
-		bst.Add(7);
-		bst.Add(90);
-		bst.Add(150);
-		bst.Add(130);
-		bst.Add(160);
+		bst.add(100);
+		bst.add(80);
+		bst.add(7);
+		bst.add(90);
+		bst.add(150);
+		bst.add(130);
+		bst.add(160);
 		
-		bst.PrintPreOrder();
-		bst.PrintInOrder();
-		bst.PrintPostOrder();
-		bst.PrintLevelOrder();
+		bst.printPreOrder();
+		bst.printInOrder();
+		bst.printPostOrder();
+		bst.printLevelOrder();
 		
-		Node node = bst.Search(160);
+		Node node = bst.search(160);
 		if (node != null) {
 			System.out.print("found");
 

@@ -2,7 +2,7 @@ import java.util.AbstractQueue;
 import java.util.LinkedList;
 
 public class BST {
-	public void Add(int key) {
+	public void add(int key) {
 		if (m_root == null){
 			m_root = new Node(key);
 			
@@ -35,7 +35,7 @@ public class BST {
 		}
 	}
 	
-	public Node Search(int key) {
+	public Node search(int key) {
 		Node currentNode = m_root;
 		
 		while(true) {
@@ -62,22 +62,22 @@ public class BST {
 		}
 	}
 	
-	public void PrintInOrder() {
-		PrintInOrder(m_root);
+	public void printInOrder() {
+		printInOrder(m_root);
 		System.out.print("\n");
 	}
 	
-	public void PrintPreOrder() {
-		PrintPreOrder(m_root);
+	public void printPreOrder() {
+		printPreOrder(m_root);
 		System.out.print("\n");
 	}
 	
-	public void PrintPostOrder() {
-		PrintPostOrder(m_root);
+	public void printPostOrder() {
+		printPostOrder(m_root);
 		System.out.print("\n");
 	}
 	
-	public void PrintLevelOrder() {
+	public void printLevelOrder() {
 		LinkedList<Node> queue = new LinkedList<Node>();
 		
 		queue.addLast(m_root);
@@ -95,34 +95,34 @@ public class BST {
 		}
 	}
 	
-	private void PrintInOrder(Node node) {
+	private void printInOrder(Node node) {
 		if (node == null) {
 			return;
 		}
 		
 		System.out.print(node.key + "\n");
-		PrintInOrder(node.left);
-		PrintInOrder(node.right);
+		printInOrder(node.left);
+		printInOrder(node.right);
 	}
 	
-	private void PrintPreOrder(Node node) {
+	private void printPreOrder(Node node) {
 		if (node == null) {
 			return;
 		}
 
-		PrintPreOrder(node.left);
+		printPreOrder(node.left);
 		System.out.print(node.key + "\n");
-		PrintPreOrder(node.right);
+		printPreOrder(node.right);
 	}
 	
-	private void PrintPostOrder(Node node) {
+	private void printPostOrder(Node node) {
 		if (node == null) {
 			return;
 		}
 		
-		PrintPostOrder(node.right);
+		printPostOrder(node.right);
 		System.out.print(node.key + "\n");
-		PrintPostOrder(node.left);
+		printPostOrder(node.left);
 	}
 
 	private Node m_root;
