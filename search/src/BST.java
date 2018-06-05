@@ -80,10 +80,18 @@ public class BST {
 	public void PrintLevelOrder() {
 		LinkedList<Node> queue = new LinkedList<Node>();
 		
-		queue.add(m_root);
+		queue.addLast(m_root);
 		
-		while(queue.getFirst() == null) {
-			
+		while(!queue.isEmpty()) {
+			Node node = queue.removeFirst();
+			if (node.left != null) {
+				queue.addLast(node.left);
+			}
+			if (node.right != null) {
+				queue.addLast(node.right);
+			}
+			System.out.print(node.key);
+			System.out.print("\n");
 		}
 	}
 	

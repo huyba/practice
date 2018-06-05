@@ -17,6 +17,7 @@ public class BSTTest {
 		bst.PrintPreOrder();
 		bst.PrintInOrder();
 		bst.PrintPostOrder();
+		bst.PrintLevelOrder();
 		
 		Node node = bst.Search(160);
 		if (node != null) {
